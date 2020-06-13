@@ -73,8 +73,9 @@ pre {
   white-space: pre-wrap;
 }
 
-nav .icon, nav a,
-ul.comments, main.details ul > li,
+nav .icon, 
+nav a,
+main.details > ul > li,
 main.about pre {
   padding: var(--padding);
 }
@@ -87,8 +88,10 @@ nav .icon, nav a
 }
 
 ul.comments {
-  padding-bottom: 0;
   margin-bottom: 0;
+  margin-top: calc(var(--padding) * 4);
+  padding-bottom: calc(var(--padding) * 2);
+  padding-left: calc(var(--padding) * 2);
 }
 
 nav a, nav a:visited {
@@ -111,10 +114,15 @@ main {
   transition: opacity .3s;
 }
 
-article, main.details li {
+article,
+main.details li {
   width: 100%;
   opacity: 1;
   transition: opacity .3s;
+}
+
+main.details li {
+  padding-top: var(--padding);
 }
 
 article.placeholder,
